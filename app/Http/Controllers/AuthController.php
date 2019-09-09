@@ -5,6 +5,7 @@ use Auth;
 use JWTAuth;
 use Validator;
 use App\User;
+
 class AuthController extends Controller
 {
     /**

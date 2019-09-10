@@ -3223,6 +3223,56 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      msg: ''
+    };
+  },
+  created: function created() {
+    if (this.$route.params.status === 'success') {
+      this.msg = '本登録が完了しました。ログイン画面からログインを行なってください。';
+    } else if (this.$route.params.status === 'fail') {
+      this.msg = 'メール認証に失敗しました。再度、メールからリンクをクリックしてください。';
+    } else if (this.$route.params.status === 'pre_register') {
+      this.msg = '仮登録が完了しました。メールのリンクをクリックして本登録をしてください。';
+    } else if (this.$route.params.status === 'invalid') {
+      this.msg = '無効なトークンです。';
+    } else if (this.$route.params.status === 'exist') {
+      this.msg = 'すでに本登録されています。ログインして利用してください。';
+    } else {
+      this.$router.push({
+        name: 'not_found'
+      });
+    }
+  },
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/es6-promise/auto.js":
 /*!******************************************!*\
   !*** ./node_modules/es6-promise/auto.js ***!
@@ -6359,6 +6409,40 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=template&id=b24dd2d4&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=template&id=b24dd2d4& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-8" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _c("p", [_vm._v(_vm._s(_vm.msg))])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -22541,7 +22625,7 @@ var config = {
   registerData: {
     url: 'api/auth/register',
     method: 'POST',
-    redirect: '/login'
+    redirect: '/register/email/pre_register'
   },
   loginData: {
     url: 'api/auth/login',
@@ -23025,6 +23109,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/pages/auth/RegisterEmailMsg.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/pages/auth/RegisterEmailMsg.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _RegisterEmailMsg_vue_vue_type_template_id_b24dd2d4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RegisterEmailMsg.vue?vue&type=template&id=b24dd2d4& */ "./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=template&id=b24dd2d4&");
+/* harmony import */ var _RegisterEmailMsg_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RegisterEmailMsg.vue?vue&type=script&lang=js& */ "./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _RegisterEmailMsg_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _RegisterEmailMsg_vue_vue_type_template_id_b24dd2d4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _RegisterEmailMsg_vue_vue_type_template_id_b24dd2d4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/auth/RegisterEmailMsg.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterEmailMsg_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./RegisterEmailMsg.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterEmailMsg_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=template&id=b24dd2d4&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=template&id=b24dd2d4& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterEmailMsg_vue_vue_type_template_id_b24dd2d4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./RegisterEmailMsg.vue?vue&type=template&id=b24dd2d4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/RegisterEmailMsg.vue?vue&type=template&id=b24dd2d4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterEmailMsg_vue_vue_type_template_id_b24dd2d4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterEmailMsg_vue_vue_type_template_id_b24dd2d4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/router/index.js":
 /*!**************************************!*\
   !*** ./resources/js/router/index.js ***!
@@ -23043,11 +23196,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_TopPage_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/TopPage.vue */ "./resources/js/pages/TopPage.vue");
 /* harmony import */ var _pages_AccountPage_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/AccountPage.vue */ "./resources/js/pages/AccountPage.vue");
 /* harmony import */ var _pages_NotFound_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/NotFound.vue */ "./resources/js/pages/NotFound.vue");
+/* harmony import */ var _pages_auth_RegisterEmailMsg_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pages/auth/RegisterEmailMsg.vue */ "./resources/js/pages/auth/RegisterEmailMsg.vue");
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app', _App_vue__WEBPACK_IMPORTED_MODULE_2__["default"]); // Pages
+
 
 
 
@@ -23088,6 +23243,13 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app', _App_vue__WEBPACK_IM
     path: '/404',
     name: 'not_found',
     component: _pages_NotFound_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }, {
+    path: '/register/email/:status',
+    name: 'register_email_msg',
+    component: _pages_auth_RegisterEmailMsg_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    meta: {
+      auth: false
+    }
   }, // { path: '/404',                      name: 'not_found',              component: not_found,             meta: { auth: false       }},
   {
     path: '*',

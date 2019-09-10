@@ -12,6 +12,7 @@ import Login                 from '../pages/auth/Login.vue'
 import index                     from '../pages/TopPage.vue'
 import account                   from '../pages/AccountPage.vue'
 import not_found                      from '../pages/NotFound.vue'
+import RegisterEmailMsg      from '../pages/auth/RegisterEmailMsg.vue'
 
 export default new Router({
   mode: 'history',
@@ -24,6 +25,7 @@ export default new Router({
     { path: '/account',                  name: 'account',                component: account,               meta: { auth: true        }},
     // not found
     { path: '/404',                      name: 'not_found',              component: not_found},
+    { path: '/register/email/:status',   name: 'register_email_msg',     component: RegisterEmailMsg,      meta: { auth: false        }},
     // { path: '/404',                      name: 'not_found',              component: not_found,             meta: { auth: false       }},
     { path: '*', redirect: '/404' },
   ],
